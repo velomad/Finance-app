@@ -1,12 +1,12 @@
 <template>
   <section class="navbar">
     <div
-      style="z-index: 9999;box-shadow: 0 15px 20px rgb(0,0,0,0.9)"
-      class="w-36 h-36 rounded-full shadow-xl fixed -top-7 -left-6 inline-flex items-center justify-center bg-indigo-800 text-gray-400"
+      style="z-index: 9999;"
+      class="w-28 h-28 md:w-36 md:h-36 rounded-full fixed -top-7 -left-6 inline-flex items-center justify-center bg-indigo-800 text-gray-400"
     >
       <img
         class="h-8 w-auto sm:h-10"
-        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+        src="https://tailwindui.com/img/logos/workflow-mark-indigo-300.svg"
         alt=""
       />
     </div>
@@ -403,7 +403,7 @@
       To: "opacity-0 scale-95"
   -->
       <div
-        class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+        class="absolute top-0 inset-x-0 p-2 invisible transition transform origin-top-right md:hidden"
       >
         <div
           class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50"
@@ -660,5 +660,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-</style>
+<style scoped></style>

@@ -1,0 +1,103 @@
+   <!-- <button
+            class="ml-0 inline-flex  py-2 px-6  text-lg"
+          >
+            <lottie
+              :options="defaultOptions2"
+              :height="60"
+              :width="270"
+              v-on:animCreated="handleAnimation"
+            />
+          </button> -->
+
+
+
+
+
+
+
+          <template>
+  <div class="py-2">
+    <hooper
+      :vertical="true"
+      style="height: 400px"
+      :itemsToShow="1.2"
+      :centerMode="true"
+    >
+      <slide class="bg-gray-50">
+        <div class="grid grid-cols-1 md:grid-cols-2 place-items-center">
+          <div class="relative">
+            <lottie
+              :options="healthInsurance"
+              :height="300"
+              v-on:animCreated="handleAnimation"
+            />
+            <div
+              class="absolute -right-10 bottom-10 text-blue-600 italic capitalize text-3xl"
+            >
+              Health Insurance
+            </div>
+          </div>
+          <div class="text-justify px-12">
+            this is some random text about health insurance, i hope this text is
+            justified to its orign sada ad ada das
+          </div>
+        </div>
+      </slide>
+      <slide class="bg-green-400">
+        slide 2
+      </slide>
+      <slide class="bg-yellow-400">
+        slide 3
+      </slide>
+      <slide class="bg-blue-400">
+        slide 4
+      </slide>
+      <slide class="bg-pink-400">
+        slide 5
+      </slide>
+      <slide class="bg-yellow-400">
+        slide 6
+      </slide>
+    </hooper>
+  </div>
+</template>
+<script>
+import { Hooper, Slide } from "hooper";
+import "hooper/dist/hooper.css";
+import healthInsurance from "@/assets/animations/health-insurance.json";
+
+export default {
+  name: "OurProducts",
+  components: {
+    Hooper,
+    Slide,
+  },
+  data() {
+    return {
+      healthInsurance: { animationData: healthInsurance, loop: true },
+    };
+  },
+  methods: {
+    handleAnimation: function(anim) {
+      this.anim = anim;
+    },
+
+    stop: function() {
+      this.anim.stop();
+    },
+
+    play: function() {
+      this.anim.play();
+    },
+
+    pause: function() {
+      this.anim.pause();
+    },
+
+    onSpeedChange: function() {
+      this.anim.setSpeed(this.animationSpeed);
+    },
+  },
+};
+</script>
+<style scoped></style>

@@ -19,7 +19,7 @@ export default {
 };
 </script>
 <style>
-body::-webkit-scrollbar {
-  display: none;
+body {
+  overflow-x: hidden;
 }
 </style>

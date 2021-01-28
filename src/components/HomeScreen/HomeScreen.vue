@@ -1,5 +1,83 @@
 <template>
-  <section class="text-gray-600 body-font mt-4">
+  <div>
+    <div
+      class="grid place-items-center grid-cols-1 md:grid-cols-2 gap-10 py-10 "
+    >
+      <div class="">
+        <h1
+          style="
+            background: linear-gradient(to right, #f7971e, #ffd200);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+          class="skeleton-box relative text-center title-font tracking-tight font-extrabold text-4xl mb-2 font-medium"
+        >
+          Lead a comfortable life!
+        </h1>
+        <h1
+          class="title-font text-center tracking-tight font-extrabold text-xl mb-4 font-medium text-gray-500"
+        >
+          We take care of your finances.
+        </h1>
+        <button
+          class="flex h-12 mx-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg relative"
+        >
+          <p class="">Get Your Credit Score</p>
+          <span>
+            <svg
+              class="w-6 h-6 mt-1 ml-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div>
+        <img
+          style="z-index: -1"
+          src="/img/wave.png"
+          class="absolute top-0 -right-10 hidden md:block"
+        />
+        <div>
+          <lottie
+            :options="defaultOptions"
+            :height="270"
+            :width="270"
+            v-on:animCreated="handleAnimation"
+          />
+        </div>
+      </div>
+    </div>
+    <SubHome />
+    <p>
+    bank bazzar phone UI for score checking 
+    </p>
+    <p>
+    our products section  
+    </p>
+    <p>
+    why choose us  
+    </p>
+    <p>
+    our partners
+    </p>
+    <p>
+    footer
+    </p>
+  </div>
+  <!-- <section class="text-gray-200 body-font mt-4">
     <div
       class="container mx-auto flex px-5 py-2 md:flex-row flex-col items-center"
     >
@@ -55,20 +133,12 @@
                 :width="90"
                 v-on:animCreated="handleAnimation"
               />
-              <span class="tracking-tight font-bold text-lg mt-8">4,50,00,000+</span>
+              <span class="tracking-tight font-bold text-lg mt-8"
+                >4,50,00,000+</span
+              >
               <span class="mt-8"> have got their Credit Scores for FREE!</span>
             </div>
           </div>
-          <!-- <button
-            class="ml-0 inline-flex  py-2 px-6  text-lg"
-          >
-            <lottie
-              :options="defaultOptions2"
-              :height="60"
-              :width="270"
-              v-on:animCreated="handleAnimation"
-            />
-          </button> -->
         </div>
       </div>
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -87,15 +157,14 @@
         </div>
       </div>
     </div>
-    <SubNavBanner />
-  </section>
+  </section> -->
 </template>
 <script>
 import animationData from "@/assets/animations/empreendedor-cor.json";
 import animationData2 from "@/assets/animations/speedometer.json";
 import animationData3 from "@/assets/animations/award.json";
 
-import SubNavBanner from "./SubHome.vue";
+import SubHome from "./SubHome.vue";
 export default {
   name: "HomeScreen",
   data() {
@@ -108,26 +177,26 @@ export default {
   },
   mounted() {},
   components: {
-    SubNavBanner,
+    SubHome,
   },
   methods: {
-    handleAnimation: function (anim) {
+    handleAnimation: function(anim) {
       this.anim = anim;
     },
 
-    stop: function () {
+    stop: function() {
       this.anim.stop();
     },
 
-    play: function () {
+    play: function() {
       this.anim.play();
     },
 
-    pause: function () {
+    pause: function() {
       this.anim.pause();
     },
 
-    onSpeedChange: function () {
+    onSpeedChange: function() {
       this.anim.setSpeed(this.animationSpeed);
     },
   },
